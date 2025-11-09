@@ -1,0 +1,5 @@
+gerente;1234;gerente
+Nany;Love;atendente
+Nany;Love;atendente
+Nany;Love;atendente
+Vitoria;Luvi;gerente
