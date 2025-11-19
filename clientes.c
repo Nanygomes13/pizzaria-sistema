@@ -2,6 +2,7 @@
 #include <string.h>
 #include "structs.h"
 #include "dados.h"
+#include "arquivos.h"
 
 void cadastrarCliente() {
 
@@ -34,4 +35,20 @@ void cadastrarCliente() {
     salvarClientes();
     
     printf("\nCliente cadastrado com sucesso! ID: %d\n", c.id);
+}
+
+void listarClientes() {
+    if (totalClientes == 0) {
+        printf("\nNenhum cliente cadastrado.\n");
+        return;
+    }
+
+    printf("\n===== LISTA DE CLIENTES =====\n");
+    for (int i = 0; i < totalClientes; i++) {
+        printf("ID: %d | Nome: %s | Telefone: %s | Endereco: %s\n",
+               clientes[i].id,
+               clientes[i].nome,
+               clientes[i].telefone,
+               clientes[i].endereco);
+    }
 }

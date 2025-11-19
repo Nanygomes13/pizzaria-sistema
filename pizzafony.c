@@ -13,10 +13,6 @@ int main() {
     //   ./pizzafony
 
     
-    carregarUsers();
-    carregarClientes();
-    carregarPizzas();
-    carregarPedidos();
     menuInicial();
 
     return 0;

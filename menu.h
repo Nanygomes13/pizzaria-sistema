@@ -4,5 +4,6 @@
 void menuInicial();
 void menuAtendente(int pos);
 void menuGerente();
+void gerarRelatorios();
 
 #endif

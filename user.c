@@ -11,7 +11,7 @@ int login() {
     char username[40];
     char password[40];
 
-    printf("\n=== LOGIN ===\n");
+    printf("\n==== LOGIN ====\n");
 
     printf("Username: ");
     fgets(username, sizeof(username), stdin);
@@ -37,7 +37,7 @@ int login() {
 void cadastrarUser() {
     int opcao;
 
-    printf("\n=== CADASTRO ===\n");
+    printf("\n==== CADASTRO ====\n");
     printf("1 - Gerente\n");
     printf("2 - Atendente\n");
     printf("Escolha o tipo de usuario: ");
@@ -62,10 +62,10 @@ void cadastrarUser() {
 
     switch (opcao) {
         case 1:
-            strcpy(novo.role, "gerente");
+            strcpy(novo.cargo, "gerente");
             break;
         case 2:
-            strcpy(novo.role, "atendente");
+            strcpy(novo.cargo, "atendente");
             break;
     }
 
@@ -74,4 +74,76 @@ void cadastrarUser() {
 
     printf("\nUsuario cadastrado com sucesso! ID: %d\n", novo.id);
 
+}
+
+void listarUsers() {
+    printf("\n==== LISTA DE USUARIOS ====\n");
+
+    if (totalUsers == 0) {
+        printf("Nenhum usuario cadastrado.\n");
+        return;
+    }
+
+    for (int i = 0; i < totalUsers; i++) {
+        printf("\nID: %d", users[i].id);
+        printf("\nUsername: %s", users[i].username);
+        printf("\nCargo: %s\n", users[i].cargo);
+    }
+}
+
+void editarUser() {
+    int id;
+    printf("\nDigite o ID do usuario que deseja editar: ");
+    scanf("%d", &id);
+    getchar();
+
+    int pos = -1;
+    for (int i = 0; i < totalUsers; i++) {
+        if (users[i].id == id) {
+            pos = i;
+            break;
+        }
+    }
+
+    if (pos == -1) {
+        printf("Usuario nao encontrado.\n");
+        return;
+    }
+
+    printf("Novo username: ");
+    fgets(users[pos].username, sizeof(users[pos].username), stdin);
+    users[pos].username[strcspn(users[pos].username, "\n")] = 0;
+
+    printf("Nova senha: ");
+    fgets(users[pos].password, sizeof(users[pos].password), stdin);
+    users[pos].password[strcspn(users[pos].password, "\n")] = 0;
+
+    printf("Usuario atualizado!\n");
+}
+
+void excluirUser() {
+    int id;
+    printf("\nDigite o ID do usuario que deseja excluir: ");
+    scanf("%d", &id);
+    getchar();
+
+    int pos = -1;
+    for (int i = 0; i < totalUsers; i++) {
+        if (users[i].id == id) {
+            pos = i;
+            break;
+        }
+    }
+
+    if (pos == -1) {
+        printf("Usuario nao encontrado.\n");
+        return;
+    }
+
+    for (int i = pos; i < totalUsers - 1; i++) {
+        users[i] = users[i + 1];
+    }
+
+    totalUsers--;
+    printf("Usuario removido com sucesso.\n");
 }

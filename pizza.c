@@ -32,3 +32,73 @@ void mostrarCardapio() {
         printf("%d - %s (R$ %.2f)\n", pizzas[i].id, pizzas[i].sabor, pizzas[i].preco);
     }
 }
+
+void listarPizzas() {
+    if (totalPizzas == 0) {
+        printf("\nNenhuma pizza cadastrada.\n");
+        return;
+    }
+
+    printf("\n===== LISTA DE PIZZAS =====\n");
+    for (int i = 0; i < totalPizzas; i++) {
+        printf("ID: %d | Sabor: %s | Preco: R$ %.2f\n",
+               pizzas[i].id, pizzas[i].sabor, pizzas[i].preco);
+    }
+}
+
+void editarPizza() {
+    int id;
+    printf("Digite o ID da pizza que deseja editar: ");
+    scanf("%d", &id);
+    getchar();
+
+    int pos = -1;
+    for (int i = 0; i < totalPizzas; i++) {
+        if (pizzas[i].id == id) {
+            pos = i;
+            break;
+        }
+    }
+
+    if (pos == -1) {
+        printf("Pizza nao encontrada.\n");
+        return;
+    }
+
+    printf("Novo sabor: ");
+    fgets(pizzas[pos].sabor, sizeof(pizzas[pos].sabor), stdin);
+    pizzas[pos].sabor[strcspn(pizzas[pos].sabor, "\n")] = 0;
+
+    printf("Novo preco: ");
+    scanf("%f", &pizzas[pos].preco);
+    getchar();
+
+    printf("Pizza atualizada com sucesso!\n");
+}
+
+void excluirPizza() {
+    int id;
+    printf("Digite o ID da pizza que deseja excluir: ");
+    scanf("%d", &id);
+    getchar();
+
+    int pos = -1;
+    for (int i = 0; i < totalPizzas; i++) {
+        if (pizzas[i].id == id) {
+            pos = i;
+            break;
+        }
+    }
+
+    if (pos == -1) {
+        printf("Pizza nao encontrada.\n");
+        return;
+    }
+
+    for (int i = pos; i < totalPizzas - 1; i++) {
+        pizzas[i] = pizzas[i + 1];
+    }
+
+    totalPizzas--;
+    printf("Pizza removida com sucesso.\n");
+}

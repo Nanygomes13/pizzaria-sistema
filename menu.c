@@ -5,7 +5,9 @@
 #include "dados.h"
 #include "structs.h"
 #include "pizza.h"
+#include "clientes.h"
 #include "pedidos.h"
+
 
 void menuInicial() {
     int opc;
@@ -235,3 +237,10 @@ void menuGerente() {
     } while (opc != 0);
 }
 
+void gerarRelatorios() {
+    printf("\n===== RELATORIOS =====\n");
+    printf("Total de Usuarios: %d\n", totalUsers);
+    printf("Total de Clientes: %d\n", totalClientes);
+    printf("Total de Pizzas: %d\n", totalPizzas);
+    printf("Total de Pedidos: %d\n", totalPedidos);
+}

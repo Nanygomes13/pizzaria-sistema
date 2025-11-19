@@ -4,8 +4,8 @@
 #include "structs.h"
 #include "dados.h"
 
-void cadastrarPedido();
 void listarPedidos();
+void cadastrarPedido();
 void editarPedido();
 void excluirPedido();
 
