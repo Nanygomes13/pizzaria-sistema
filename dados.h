@@ -10,13 +10,11 @@
 #define MAX_PIZZAS 100
 #define MAX_PEDIDOS 200
 
-// Declaração dos arrays globais
 extern User users[MAX_USERS];
 extern Cliente clientes[MAX_CLIENTES];
 extern Pizza pizzas[MAX_PIZZAS];
 extern Pedido pedidos[MAX_PEDIDOS];
 
-// Contadores
 extern int totalUsers;
 extern int totalClientes;
 extern int totalPizzas;

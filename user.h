@@ -3,5 +3,9 @@
 
 int login();
 void cadastrarUser();
+void listarUsers();
+void editarUser();
+void excluirUser();
+int gerarIdUser();
 
 #endif

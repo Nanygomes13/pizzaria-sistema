@@ -11,7 +11,7 @@ void menuInicial() {
     int opc;
 
     do {
-        printf("       SISTEMA PIZZAFONY    \n");
+        printf("\n       SISTEMA PIZZAFONY    \n");
         printf("1 - Login\n");
         printf("2 - Cadastro\n");
         printf("0 - Sair\n");
@@ -50,13 +50,13 @@ void menuAtendente(int posUser) {
     int opc;
 
     do {
-        printf("\n======= MENU ATENDENTE =======\n");
+        printf("\n\n MENU ATENDENTE \n");
         printf("1 - Ver pedidos\n");
         printf("2 - Ver cardapio\n");
         printf("0 - Sair\n");
         printf("Escolha: ");
         scanf("%d", &opc);
-        getchar(); // limpar buffer
+        getchar(); 
 
         switch (opc) {
             case 1:
@@ -82,7 +82,7 @@ void menuGerente(int posUser) {
     int opc;
 
     do {
-        printf("\n======= MENU GERENTE =======\n");
+        printf("\n\n MENU GERENTE \n");
         printf("1 - Cadastrar pizza\n");
         printf("2 - Ver cardapio\n");
         printf("3 - Ver pedidos\n");

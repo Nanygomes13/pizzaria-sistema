@@ -40,12 +40,11 @@ void cadastrarUser() {
     printf("\n=== CADASTRO ===\n");
     printf("1 - Gerente\n");
     printf("2 - Atendente\n");
-    printf("3 - Cliente\n");
-    printf("Escolha o tipo de usuário: ");
+    printf("Escolha o tipo de usuario: ");
     scanf("%d", &opcao);
-    getchar(); // limpa o buffer
+    getchar(); 
 
-    if (opcao < 1 || opcao > 3) {
+    if (opcao < 1 || opcao > 2) {
         printf("Opcao invalida!\n");
         return;
     }
@@ -68,34 +67,11 @@ void cadastrarUser() {
         case 2:
             strcpy(novo.role, "atendente");
             break;
-        case 3:
-            strcpy(novo.role, "cliente");
-            break;
     }
 
-    // Salva o usuário
     users[totalUsers] = novo;
     totalUsers++;
 
     printf("\nUsuario cadastrado com sucesso! ID: %d\n", novo.id);
 
-    if (strcmp(novo.role, "cliente") == 0) {
-        Cliente c;
-        c.user_id = novo.id;
-
-        printf("\n=== Dados do Cliente ===\n");
-
-        printf("Nome completo: ");
-        fgets(c.nome, sizeof(c.nome), stdin);
-        c.nome[strcspn(c.nome, "\n")] = 0;
-
-        printf("Telefone: ");
-        fgets(c.telefone, sizeof(c.telefone), stdin);
-        c.telefone[strcspn(c.telefone, "\n")] = 0;
-
-        clientes[totalClientes] = c;
-        totalClientes++;
-
-        printf("Cliente cadastrado com sucesso!\n");
-    }
 }

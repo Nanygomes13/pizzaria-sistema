@@ -4,11 +4,10 @@
 #include "structs.h"
 #include "dados.h"
 
-extern Pizza pizzas[100];
-extern int totalPizzas;
-
-int gerarIdPizza();
 void cadastrarPizza();
+void listarPizzas();
+void editarPizza();
+void excluirPizza();
 void mostrarCardapio();
 
 #endif

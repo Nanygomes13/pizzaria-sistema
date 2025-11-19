@@ -3,6 +3,6 @@
 
 void menuInicial();
 void menuAtendente(int pos);
-void menuGerente(int pos);
+void menuGerente();
 
 #endif
