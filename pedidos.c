@@ -2,6 +2,7 @@
 #include <string.h>
 #include <time.h>
 #include "pedidos.h"
+#include "arquivos.h"
 #include "structs.h"
 #include "dados.h"
 #include "pizza.h"
@@ -96,6 +97,8 @@ void cadastrarPedido() {
     pedidos[totalPedidos] = p;
     totalPedidos++;
 
+    salvarPedidos();
+
     printf("Pedido cadastrado com sucesso! ID: %d\n", p.id);
 }
 
@@ -131,6 +134,8 @@ void editarPedido() {
 
     pedidos[pos].timestamp = time(NULL);
 
+    salvarPedidos();
+
     printf("Pedido atualizado com sucesso.\n");
 }
 
@@ -158,5 +163,8 @@ void excluirPedido() {
     }
 
     totalPedidos--;
+
+    salvarPedidos();
+
     printf("Pedido removido com sucesso.\n");
 }

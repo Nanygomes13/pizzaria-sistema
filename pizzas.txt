@@ -1,0 +1,4 @@
+1;Queijo;30.00
+2;Calabresa;30.00
+3;Frango + Catupyri;32.50
+4;Nutella;35.00

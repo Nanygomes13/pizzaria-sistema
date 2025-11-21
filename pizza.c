@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "pizza.h"
+#include "arquivos.h"
 #include "dados.h"    
 #include "structs.h"  
 #include "menu.h" 
@@ -22,6 +23,8 @@ void cadastrarPizza() {
 
     pizzas[totalPizzas] = p;
     totalPizzas++;
+
+    salvarPizzas();
 
     printf("\nPizza cadastrada com sucesso! ID: %d\n", p.id);
 }
@@ -73,6 +76,8 @@ void editarPizza() {
     scanf("%f", &pizzas[pos].preco);
     getchar();
 
+    salvarPizzas();
+
     printf("Pizza atualizada com sucesso!\n");
 }
 
@@ -100,5 +105,8 @@ void excluirPizza() {
     }
 
     totalPizzas--;
+
+    salvarPizzas();
+
     printf("Pizza removida com sucesso.\n");
 }

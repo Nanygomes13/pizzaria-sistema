@@ -38,8 +38,6 @@ void carregarUsers() {
     fclose(f);
 }
 
-// ========================= CLIENTES =========================
-
 void salvarClientes() {
     FILE *f = fopen("clientes.txt", "w");
     if (!f) return;
@@ -98,7 +96,6 @@ void carregarPizzas() {
         line[strcspn(line, "\r\n")] = 0;
         if (strlen(line) == 0) continue;
         Pizza tmp;
-        // espera: id;sabor;preco
         if (sscanf(line, "%d;%59[^;];%f",
                    &tmp.id,
                    tmp.sabor,

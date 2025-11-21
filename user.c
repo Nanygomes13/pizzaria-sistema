@@ -1,11 +1,10 @@
-//.h --> declara
-//.c --> implementa
-
 #include <stdio.h>
 #include <string.h>
-#include "structs.h"
-#include "dados.h"
 #include "user.h"
+#include "arquivos.h"  
+#include "dados.h"
+#include "structs.h"
+
 
 int login() {
     char username[40];
@@ -72,6 +71,8 @@ void cadastrarUser() {
     users[totalUsers] = novo;
     totalUsers++;
 
+    salvarUsers();
+
     printf("\nUsuario cadastrado com sucesso! ID: %d\n", novo.id);
 
 }
@@ -118,6 +119,8 @@ void editarUser() {
     fgets(users[pos].password, sizeof(users[pos].password), stdin);
     users[pos].password[strcspn(users[pos].password, "\n")] = 0;
 
+    salvarUsers();
+
     printf("Usuario atualizado!\n");
 }
 
@@ -145,5 +148,8 @@ void excluirUser() {
     }
 
     totalUsers--;
+
+    salvarUsers();
+
     printf("Usuario removido com sucesso.\n");
 }

@@ -1,0 +1,4 @@
+1;nany;1234;gerente
+2;Manuella;1234;atendente
+3;Millena Sofia;1234;atendente
+4;Sofia;1234;atendente
