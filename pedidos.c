@@ -19,13 +19,14 @@ void listarPedidos() {
         Pedido p = pedidos[i];
 
         char nomeCliente[40] = "Desconhecido";
-        for (int u = 0; u < totalUsers; u++) {
-            if (users[u].id == p.user_id_cliente) {
-                strncpy(nomeCliente, users[u].username, sizeof(nomeCliente) - 1);
+        for (int u = 0; u < totalClientes; u++) {
+            if (clientes[u].id == p.user_id_cliente) {
+                strncpy(nomeCliente, clientes[u].nome, sizeof(nomeCliente) - 1);
                 nomeCliente[sizeof(nomeCliente) - 1] = '\0';
                 break;
             }
         }
+
 
         char nomePizza[60] = "Desconhecido";
         float precoPizza = 0.0;
