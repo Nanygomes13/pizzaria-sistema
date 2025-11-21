@@ -1,3 +1,35 @@
-2;2;2;1;30.00;1763757681
-3;3;3;1;32.50;1763757693
-4;4;4;1;35.00;1763757899
+
+id: 1;
+ Cliente: 1;
+ Pizza: 1;
+ Quantidade: 1;
+ Total: 30.00;
+ Timestamp: 1763760536
+
+id: 2;
+ Cliente: 2;
+ Pizza: 2;
+ Quantidade: 1;
+ Total: 30.00;
+ Timestamp: 1763760543
+
+id: 3;
+ Cliente: 3;
+ Pizza: 3;
+ Quantidade: 1;
+ Total: 30.00;
+ Timestamp: 1763760552
+
+id: 4;
+ Cliente: 4;
+ Pizza: 4;
+ Quantidade: 1;
+ Total: 35.00;
+ Timestamp: 1763760564
+
+id: 5;
+ Cliente: 5;
+ Pizza: 2;
+ Quantidade: 3;
+ Total: 90.00;
+ Timestamp: 1763760699

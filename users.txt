@@ -1,4 +1,8 @@
-1;nany;1234;gerente
-2;Manuella;1234;atendente
-3;Millena Sofia;1234;atendente
-4;Sofia;1234;atendente
+Id: 1;
+Nome: Lourrany;
+Senha: 1234;
+Cargo: gerente
+Id: 2;
+Nome: Vit¢ria;
+Senha: 1234;
+Cargo: atendente

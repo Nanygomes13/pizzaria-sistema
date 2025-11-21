@@ -25,7 +25,7 @@ void cadastrarCliente() {
     fgets(c.telefone, sizeof(c.telefone), stdin);
     c.telefone[strcspn(c.telefone, "\n")] = 0;
 
-    printf("Endereço: ");
+    printf("Endereco: ");
     fgets(c.endereco, sizeof(c.endereco), stdin);
     c.endereco[strcspn(c.endereco, "\n")] = 0;
 
