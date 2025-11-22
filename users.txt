@@ -1,8 +1,5 @@
 Id: 1;
-Nome: Lourrany;
+Nome: nany;
 Senha: 1234;
 Cargo: gerente
-Id: 2;
-Nome: Vit¢ria;
-Senha: 1234;
-Cargo: atendente
+------------------------------

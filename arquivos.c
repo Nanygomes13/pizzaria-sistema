@@ -17,6 +17,7 @@ void salvarUsers() {
             users[i].password,
             users[i].cargo
         );
+        fprintf(f, "------------------------------\n");
     }
 
     fclose(f);
