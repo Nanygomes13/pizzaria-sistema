@@ -1,6 +1,3 @@
-//.h --> declara
-//.c --> implementa
-
 #include "dados.h"
 
 User users[MAX_USERS];

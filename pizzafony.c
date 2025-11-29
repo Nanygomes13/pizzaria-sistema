@@ -11,7 +11,6 @@ int main() {
     // powershell:   
     //    gcc pizzafony.c dados.c user.c menu.c pizza.c pedidos.c clientes.c arquivos.c -o pizzafony
     //   ./pizzafony
-
     
     menuInicial();
 

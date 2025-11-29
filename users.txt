@@ -1,5 +1,2 @@
-Id: 1;
-Nome: nany;
-Senha: 1234;
-Cargo: gerente
-------------------------------
+1;mauricio;1234;gerente
+2;Vitoria;1234;atendente

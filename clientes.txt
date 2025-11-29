@@ -1,20 +1,2 @@
-Id: 1;
-Nome: Josefa;
-Telefone: 11111111;
-Endereco: Santa Izabel
-Id: 2;
-Nome: Manuella;
-Telefone: 222222222;
-Endereco: Girau do Ponciano, centro
-Id: 3;
-Nome: Millena Sofia;
-Telefone: 333333333;
-Endereco: Macei¢
-Id: 4;
-Nome: Luiz Felipe;
-Telefone: 44444444;
-Endereco: Arapiraca
-Id: 5;
-Nome: Fabio;
-Telefone: 55555555;
-Endereco: Minas Gerais
+1;joao;2222222;arapiraca
+2;maria;111111111;arapiraca

@@ -11,13 +11,12 @@ void salvarUsers() {
     if (!f) return;
 
     for (int i = 0; i < totalUsers; i++) {
-        fprintf(f, "Id: %d;""\nNome: %s;""\nSenha: %s;""\nCargo: %s\n",
+        fprintf(f, "%d;""%s;""%s;""%s\n",
             users[i].id,
             users[i].username,
             users[i].password,
             users[i].cargo
         );
-        fprintf(f, "------------------------------\n");
     }
 
     fclose(f);
@@ -44,7 +43,7 @@ void salvarClientes() {
     if (!f) return;
 
     for (int i = 0; i < totalClientes; i++) {
-        fprintf(f, "Id: %d;""\nNome: %s;""\nTelefone: %s;""\nEndereco: %s\n",
+        fprintf(f, "%d;""%s;""%s;""%s\n",
             clientes[i].id,
             clientes[i].nome,
             clientes[i].telefone,
@@ -77,7 +76,7 @@ void salvarPizzas() {
     if (!f) return;
 
     for (int i = 0; i < totalPizzas; i++) {
-        fprintf(f, "Id: %d;""\nSabor: %s;""\nPreco: %.2f\n",
+        fprintf(f, "%d;""%s;""%.2f\n",
             pizzas[i].id,
             pizzas[i].sabor,
             pizzas[i].preco
@@ -115,7 +114,7 @@ void salvarPedidos() {
     if (!f) return;
 
     for (int i = 0; i < totalPedidos; i++) {
-        fprintf(f, "\nid: %d;""\n Cliente: %d;""\n Pizza: %d;""\n Quantidade: %d;""\n Total: %.2f;""\n Timestamp: %ld\n",
+        fprintf(f, "%d;""%d;""%d;""%d;""%.2f;""%ld\n",
             pedidos[i].id,
             pedidos[i].user_id_cliente,
             pedidos[i].pizza_id,

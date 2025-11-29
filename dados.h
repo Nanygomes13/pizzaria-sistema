@@ -1,5 +1,3 @@
-//header guard: evita rodar esse arquivo mais de uma vez
-
 #ifndef DADOS_H
 #define DADOS_H
 
@@ -26,4 +24,3 @@ int gerarIdPizza();
 int gerarIdPedido();
 
 #endif
-// fim do header guard

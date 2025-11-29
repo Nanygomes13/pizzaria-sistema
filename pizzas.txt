@@ -1,12 +1,2 @@
-Id: 1;
-Sabor: Calabresa;
-Preco: 30.00
-Id: 2;
-Sabor: Queijo;
-Preco: 30.00
-Id: 3;
-Sabor: Frango com Catupyri;
-Preco: 30.00
-Id: 4;
-Sabor: Nutella;
-Preco: 35.00
+2;calabresa;30.00
+3;portuguesa;30.00
